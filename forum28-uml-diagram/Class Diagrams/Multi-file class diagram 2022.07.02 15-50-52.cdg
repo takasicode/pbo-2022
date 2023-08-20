@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="App" package="app" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="judul" type="String" visibility="private"/>
+        <Field name="jDesktopPane1" type="javax.swing.JDesktopPane" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jMenu1" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu2" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuItem1" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem2" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jMenuItem1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DataMenu" package="app" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="koneksi" type="Koneksi" visibility="package"/>
+        <Field name="model" type="DefaultTableModel" visibility="private"/>
+        <Field name="btnBatal" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnEdit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnHapus" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSimpan" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cb_menu" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tbl_menu" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tf_cariMenu" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_harga" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_idMenu" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_stok" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="autonumber" returnType="void" visibility="private"/>
+        <Method name="clear" returnType="void" visibility="public"/>
+        <Method name="loadData" returnType="void" visibility="public"/>
+        <Method name="cariData" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnEditActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnHapusActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSimpanActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tbl_menuMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="btnBatalActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tf_cariMenuActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tf_cariMenuKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Koneksi" package="app" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="koneksi" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getKoneksi" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ListMenu" package="app" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="model" type="DefaultTableModel" visibility="private"/>
+        <Field name="btnBatal" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnPilih" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tbl_menu" type="javax.swing.JTable" visibility="private"/>
+        <Field name="txCari" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="loadData" returnType="void" visibility="public"/>
+        <Method name="cari" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnPilihActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBatalActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txCariActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txCariKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pembayaran" package="app" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="Tanggal" type="String" visibility="package"/>
+        <Field name="model" type="DefaultTableModel" visibility="private"/>
+        <Field name="btnCari" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnHapus" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSimpan" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnTambah" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tbl_pembayaran" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tf_bayar" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_harga" type="javax.swing.JTextField" visibility="public" isStatic="true"/>
+        <Field name="tf_id_Menu" type="javax.swing.JTextField" visibility="public" isStatic="true"/>
+        <Field name="tf_jumlah" type="javax.swing.JTextField" visibility="public" isStatic="true"/>
+        <Field name="tf_kembalian" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_namaPembeli" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_noTransaksi" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_tampil" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_tanggal" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_totalBayar" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="totalBiaya" returnType="void" visibility="public"/>
+        <Method name="autonumber" returnType="void" visibility="private"/>
+        <Method name="loadData" returnType="void" visibility="public"/>
+        <Method name="kosong" returnType="void" visibility="public"/>
+        <Method name="utama" returnType="void" visibility="public"/>
+        <Method name="clear" returnType="void" visibility="public"/>
+        <Method name="clear2" returnType="void" visibility="public"/>
+        <Method name="tambahTransaksi" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="tf_jumlahActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnTambahActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnHapusActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tf_bayarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSimpanActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCariActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="koneksi" source="app.DataMenu" target="app.Koneksi" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

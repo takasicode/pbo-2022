@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-package class diagram">
+  <ClassDiagramComponents>
+    <Class name="ControllerKelautan" package="Controller" visibility="public" xPosition="807.0" yPosition="694.0">
+      <Fields>
+        <Field name="frame" type="FormKelautan" visibility="package"/>
+        <Field name="implKelautan" type="ImplementKelautan" visibility="package"/>
+        <Field name="lmk" type="List&lt;ModelKelautan&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="FormKelautan" name="frame"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isiTable" returnType="void" visibility="public"/>
+        <Method name="reset" returnType="void" visibility="public"/>
+        <Method name="isiField" returnType="void" visibility="public">
+          <Argument type="int" name="row"/>
+        </Method>
+        <Method name="insert" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="isiTableCariNama" returnType="void" visibility="public"/>
+        <Method name="cariNama" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DAOKelautan" package="DAO" visibility="public" xPosition="398.0" yPosition="694.0">
+      <Fields>
+        <Field name="connection" type="Connection" visibility="package"/>
+        <Field name="select" type="String" visibility="package" isFinal="true"/>
+        <Field name="insert" type="String" visibility="package" isFinal="true"/>
+        <Field name="delete" type="String" visibility="package" isFinal="true"/>
+        <Field name="update" type="String" visibility="package" isFinal="true"/>
+        <Field name="cariNama" type="String" visibility="package" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAll" returnType="List&lt;ModelKelautan&gt;" visibility="public"/>
+        <Method name="insert" returnType="void" visibility="public">
+          <Argument type="ModelKelautan" name="mk"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="int" name="no"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="ModelKelautan" name="mk"/>
+        </Method>
+        <Method name="getCariNama" returnType="List&lt;ModelKelautan&gt;" visibility="public">
+          <Argument type="String" name="nama"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="KoneksiDB" package="Koneksi" visibility="public" xPosition="114.0" yPosition="303.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="connection" returnType="Connection" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="ModelKelautan" package="Model" visibility="public" xPosition="855.0" yPosition="36.0">
+      <Fields>
+        <Field name="no" type="int" visibility="private"/>
+        <Field name="nama" type="String" visibility="private"/>
+        <Field name="luas" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getNo" returnType="int" visibility="public"/>
+        <Method name="setNo" returnType="void" visibility="public">
+          <Argument type="int" name="no"/>
+        </Method>
+        <Method name="getNama" returnType="String" visibility="public"/>
+        <Method name="setNama" returnType="void" visibility="public">
+          <Argument type="String" name="nama"/>
+        </Method>
+        <Method name="getLuas" returnType="String" visibility="public"/>
+        <Method name="setLuas" returnType="void" visibility="public">
+          <Argument type="String" name="luas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ModelTblKelautan" package="Model" visibility="public" xPosition="1273.0" yPosition="65.0">
+      <Fields>
+        <Field name="lmk" type="List&lt;ModelKelautan&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;ModelKelautan&gt;" name="lmk"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="row"/>
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FormKelautan" package="View" visibility="public" xPosition="1273.0" yPosition="322.0">
+      <Fields>
+        <Field name="ck" type="ControllerKelautan" visibility="package"/>
+        <Field name="btn_batal" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_cari" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_hapus" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_perbarui" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_tambah" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="label_judul" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="label_luasLaut" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="label_namaLaut" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="label_no" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="tabel_hasil" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tf_cari" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_luasLaut" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_namaLaut" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_no" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btn_tambahActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_hapusActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_perbaruiActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tf_noActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tf_namaLautActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tf_luasLautActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tf_cariActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_batalActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_cariActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tabel_hasilMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getBtn_cari" returnType="JButton" visibility="public"/>
+        <Method name="setBtn_cari" returnType="void" visibility="public">
+          <Argument type="JButton" name="btn_cari"/>
+        </Method>
+        <Method name="getBtn_hapus" returnType="JButton" visibility="public"/>
+        <Method name="setBtn_hapus" returnType="void" visibility="public">
+          <Argument type="JButton" name="btn_hapus"/>
+        </Method>
+        <Method name="getBtn_perbarui" returnType="JButton" visibility="public"/>
+        <Method name="setBtn_perbarui" returnType="void" visibility="public">
+          <Argument type="JButton" name="btn_perbarui"/>
+        </Method>
+        <Method name="getBtn_tambah" returnType="JButton" visibility="public"/>
+        <Method name="setBtn_tambah" returnType="void" visibility="public">
+          <Argument type="JButton" name="btn_tambah"/>
+        </Method>
+        <Method name="getTabel_hasil" returnType="JTable" visibility="public"/>
+        <Method name="setTabel_hasil" returnType="void" visibility="public">
+          <Argument type="JTable" name="tabel_hasil"/>
+        </Method>
+        <Method name="getTf_cari" returnType="JTextField" visibility="public"/>
+        <Method name="setTf_cari" returnType="void" visibility="public">
+          <Argument type="JTextField" name="tf_cari"/>
+        </Method>
+        <Method name="getTf_luasLaut" returnType="JTextField" visibility="public"/>
+        <Method name="setTf_luasLaut" returnType="void" visibility="public">
+          <Argument type="JTextField" name="tf_luasLaut"/>
+        </Method>
+        <Method name="getTf_namaLaut" returnType="JTextField" visibility="public"/>
+        <Method name="setTf_namaLaut" returnType="void" visibility="public">
+          <Argument type="JTextField" name="tf_namaLaut"/>
+        </Method>
+        <Method name="getTf_no" returnType="JTextField" visibility="public"/>
+        <Method name="setTf_no" returnType="void" visibility="public">
+          <Argument type="JTextField" name="tf_no"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MVC_CRUD" package="mvc_crud" visibility="public" xPosition="114.0" yPosition="543.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="ImplementKelautan" package="DAO" visibility="public" xPosition="398.0" yPosition="80.0">
+      <Methods>
+        <Method name="getAll" returnType="List&lt;ModelKelautan&gt;" visibility="public"/>
+        <Method name="insert" returnType="void" visibility="public">
+          <Argument type="ModelKelautan" name="mk"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="int" name="no"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="ModelKelautan" name="mk"/>
+        </Method>
+        <Method name="getCariNama" returnType="List&lt;ModelKelautan&gt;" visibility="public">
+          <Argument type="String" name="nama"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="lmk" source="Controller.ControllerKelautan" target="Model.ModelKelautan" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ModelKelautan&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="DAO.DAOKelautan" target="DAO.ImplementKelautan"/>
+    <HasRelation name="implKelautan" source="Controller.ControllerKelautan" target="DAO.ImplementKelautan" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ck" source="View.FormKelautan" target="Controller.ControllerKelautan" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="DAO.ImplementKelautan" target="Model.ModelKelautan" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="DAO.DAOKelautan" target="Model.ModelKelautan" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="frame" source="Controller.ControllerKelautan" target="View.FormKelautan" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lmk" source="Model.ModelTblKelautan" target="Model.ModelKelautan" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ModelKelautan&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
